@@ -1,0 +1,235 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+
+:root {
+  --blue-primary: #1e3a8a;
+  --blue-dark: #0f172a;
+  --amber-gold: #fbbf24;
+  --amber-dark: #ea580c;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* التنسيقات الخاصة بالروابط المخصصة في الهيدر */
+.nav-link {
+  position: relative;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  right: 0;
+  background-color: var(--amber-gold);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* واجهة العرض البصرية (Hero) */
+.hero-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #ea580c 100%);
+}
+
+/* أزرار الإجراء السريع المشروطة بتجربة استخدام رائعة */
+.btn-primary {
+  background: var(--amber-gold);
+  color: #1e3a8a;
+  padding: 0.875rem 2.25rem;
+  border-radius: 0.5rem;
+  font-weight: 900;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-primary:hover {
+  background: #f59e0b;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #0f172a;
+  padding: 0.875rem 2.25rem;
+  border-radius: 0.5rem;
+  font-weight: 800;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e8f0;
+}
+.btn-secondary:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
+}
+
+/* كروت الخدمات المتكاملة بحركة ثلاثية الأبعاد خفيفة عند التحويم */
+.service-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(30, 58, 138, 0.1), 0 10px 10px -5px rgba(30, 58, 138, 0.04);
+  border-color: rgba(30, 58, 138, 0.1);
+}
+
+.icon-box {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* قسم المميزات التنافسية */
+.feature-icon {
+  background: linear-gradient(135deg, #1e3a8a, #0f172a);
+  color: #ffffff;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin: 0 auto 1.25rem;
+  box-shadow: 0 10px 15px -3px rgba(30, 58, 138, 0.2);
+}
+
+/* كروت التقييمات وآراء العملاء */
+.testimonial-box {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.testimonial-box:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* كرت معرض الأعمال المطور */
+.gallery-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+/* تخصيص مدخلات نموذج المراسلة */
+input, select, textarea {
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+input:focus, select:focus, textarea:focus {
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.2);
+}
+
+/* زر الواتساب العائم بالتأثير النبضي الدائم الحذر والواضح */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 1000;
+  background: #25d366;
+  color: #ffffff;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgba(37, 211, 102, 0.3);
+  animation: pulse-button 2s infinite;
+}
+
+@keyframes pulse-button {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite;
+}
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.95; transform: scale(0.98); }
+}
+
+/* --- كود تحسين الاستجابة للهاتف والكمبيوتر معاً --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* تحويل الأقسام إلى شبكة مرنة متجاوبة تلقائياً */
+#services .grid, 
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: 1fr; /* الافتراضي للهاتف: كرت واحد في السطر */
+  gap: 1.5rem;
+}
+
+/* تنسيق النموذج والخريطة بالتساوي في الأسفل */
+#contact .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* الشاشات الكبيرة (الكمبيوتر والأيباد العريض) */
+@media (min-width: 768px) {
+  #services .grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 كروت بجانب بعضها في الكمبيوتر */
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: repeat(4, 1fr); /* الميزات التنافسية تصبح 4 أعمدة */
+  }
+  
+  #contact .grid {
+    grid-template-columns: repeat(2, 1fr); /* النموذج والخريطة بجانب بعضهما */
+  }
+  
+  /* تكبير أحجام الخطوط قليلاً للكمبيوتر */
+  h1 { font-size: 3.5rem !important; }
+  h2 { font-size: 2.5rem !important; }
+  
+  /* جعل الأزرار والصناديق تأخذ عرضاً مناسباً بدلاً من ملء الشاشة العريضة */
+  .max-w-sm {
+    max-width: 48rem !important; /* يتوسع الصندوق ليعطي مظهراً فخماً في الكمبيوتر */
+  }
+  
+  .flex-col {
+    flex-direction: row !important; /* الأزرار تترتب بجانب بعضها في الكمبيوتر */
+    justify-content: center;
+  }
+}
